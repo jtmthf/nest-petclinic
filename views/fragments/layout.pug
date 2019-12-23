@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        title PetClinic :: a NestJS demonstration
+    body
+        nav.navbar.navbar-light(role='navigation')
+            a.navbar-brand(href='/')
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            .collapse.navbar-collapse#navbarSupportedContent
+                ul.navbar-nav.ml-auto
+                    mixin menuItem(path, title, icon, text)
+                        li.nav-item(class=currentPath.startsWith(path) && 'active')
+        .container-fluid
+            .container.xd-container
+                block template
+        block scripts
+            script(src="/js/bundle.js")

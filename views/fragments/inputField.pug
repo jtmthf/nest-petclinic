@@ -1,0 +1,4 @@
+mixin inputField(label, name, type = 'text')
+  - const valid = !h.fields.hasErrors(name, errors)
+    .form-group(class=valid || 'has-error')
+    label.col-sm-2.control-label= label
